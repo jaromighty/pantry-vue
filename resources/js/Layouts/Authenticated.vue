@@ -8,6 +8,10 @@ import BreezeResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import { Link } from '@inertiajs/inertia-vue3';
 
 const showingNavigationDropdown = ref(false);
+
+const navigation = [
+    { name: 'Dashboard', href: route('dashboard'), components: ['Dashboard'] },
+];
 </script>
 
 <template>
@@ -27,8 +31,8 @@ const showingNavigationDropdown = ref(false);
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
+                                <BreezeNavLink v-for="item in navigation" :key="item.name" :href="item.href" :active="item.components.includes($page.component)">
+                                    {{ item.name }}
                                 </BreezeNavLink>
                             </div>
                         </div>
@@ -93,13 +97,6 @@ const showingNavigationDropdown = ref(false);
                     </div>
                 </div>
             </nav>
-
-            <!-- Page Heading -->
-            <header class="bg-white shadow" v-if="$slots.header">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    <slot name="header" />
-                </div>
-            </header>
 
             <!-- Page Content -->
             <main>
