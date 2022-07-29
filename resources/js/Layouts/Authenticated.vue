@@ -12,6 +12,7 @@ const showingNavigationDropdown = ref(false);
 const navigation = [
     { name: 'Dashboard', href: route('dashboard'), components: ['Dashboard'] },
     { name: 'Ingredients', href: route('ingredients.index'), components: ['Ingredients/Index'] },
+    { name: 'Recipes', href: route('recipes.index'), components: ['Recipes/Index'] },
 ];
 </script>
 
