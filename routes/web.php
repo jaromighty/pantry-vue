@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\IngredientController;
+use App\Http\Controllers\RecipeController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -30,6 +31,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::prefix('ingredients')->name('ingredients.')->group(function () {
         Route::get('/', [IngredientController::class, 'index'])->name('index');
     });
+    Route::resource('recipes', RecipeController::class);
 });
 
 require __DIR__.'/auth.php';
