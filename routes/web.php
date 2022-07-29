@@ -28,9 +28,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', fn () => Inertia::render('Dashboard'))->name('dashboard');
-    Route::prefix('ingredients')->name('ingredients.')->group(function () {
-        Route::get('/', [IngredientController::class, 'index'])->name('index');
-    });
+    Route::resource('ingredients', IngredientController::class);
     Route::resource('recipes', RecipeController::class);
 });
 
