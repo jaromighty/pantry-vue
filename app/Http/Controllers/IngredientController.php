@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\IngredientRequest;
 use App\Models\Ingredient;
 use Illuminate\Http\Request;
 
@@ -33,9 +34,11 @@ class IngredientController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(IngredientRequest $request)
     {
-        //
+        Ingredient::create($request->validated());
+
+        return redirect()->route('ingredients.index');
     }
 
     /**
