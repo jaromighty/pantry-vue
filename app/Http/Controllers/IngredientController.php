@@ -24,7 +24,7 @@ class IngredientController extends Controller
      */
     public function create()
     {
-        //
+        return inertia('Ingredients/Create');
     }
 
     /**
