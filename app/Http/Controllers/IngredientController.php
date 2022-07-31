@@ -38,7 +38,6 @@ class IngredientController extends Controller
      */
     public function store(IngredientRequest $request)
     {
-        return "hello";
         Ingredient::create($request->validated());
 
         return redirect()->route('ingredients.index');
