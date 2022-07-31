@@ -3,6 +3,10 @@ import AuthenticatedLayout from '@/Layouts/Authenticated.vue';
 import { Head } from '@inertiajs/inertia-vue3';
 import Header from '@/Components/Headers/Index.vue';
 import PrimaryButton from '@/Components/Buttons/Primary.vue';
+
+defineProps({
+    ingredients: Array,
+});
 </script>
 
 <template>
