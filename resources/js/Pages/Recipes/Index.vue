@@ -15,7 +15,7 @@ import PrimaryButton from '@/Components/Buttons/Primary.vue';
                     Recipes
                 </template>
                 <template #actions>
-                    <PrimaryButton type="button">
+                    <PrimaryButton as="link" :href="route('recipes.create')">
                         Add a recipe
                     </PrimaryButton>
                 </template>
