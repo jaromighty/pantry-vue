@@ -20,7 +20,7 @@ const submit = () => {
         <div class="py-12">
             <Header>Add an ingredient</Header>
             <div class="mt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <form @submit="submit">
+                <form @submit.prevent="submit">
                     <div>
                         <label for="ingredient-name" class="block text-sm font-medium text-gray-700">Ingredient name</label>
                         <div class="mt-1">
