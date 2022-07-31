@@ -15,7 +15,9 @@ class IngredientController extends Controller
      */
     public function index()
     {
-        return inertia('Ingredients/Index');
+        return inertia('Ingredients/Index', [
+            'ingredients' => Ingredient::orderBy('name')->get(),
+        ]);
     }
 
     /**
