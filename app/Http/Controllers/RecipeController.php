@@ -15,7 +15,9 @@ class RecipeController extends Controller
      */
     public function index()
     {
-        return inertia('Recipes/Index');
+        return inertia('Recipes/Index', [
+            'recipes' => Recipe::all()
+        ]);
     }
 
     /**
