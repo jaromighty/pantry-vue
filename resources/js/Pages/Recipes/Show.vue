@@ -25,7 +25,7 @@ defineProps(['recipe'])
                             <h1 class="truncate text-2xl font-bold text-gray-900">{{ recipe.name }}</h1>
                         </div>
                         <div class="justify-stretch mt-3 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-4">
-                            <PrimaryButton as="link" :href="route('recipes.edit', [recipe.id])">
+                            <PrimaryButton as="link" :href="route('recipes.edit', [recipe.slug])">
                                 Edit
                             </PrimaryButton>
                         </div>

@@ -6,7 +6,7 @@ defineProps(['recipe']);
 
 <template>
     <li class="relative">
-        <Link :href="route('recipes.show', [recipe.id])">
+        <Link :href="route('recipes.show', [recipe.slug])">
             <div
                 class="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg bg-gray-200 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
                 <!-- <img :src="file.source" alt="" class="pointer-events-none object-cover group-hover:opacity-75" /> -->
