@@ -37,15 +37,19 @@ defineProps(['recipe'])
             </div>
 
             <div class="mt-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="overflow-hidden rounded-lg bg-gray-200">
-                    <div class="px-4 py-5 sm:p-6">
-                        <h3 class="text-lg font-medium leading-6 text-gray-900">Ingredients</h3>
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div>
+                        <div class="overflow-hidden rounded-lg bg-gray-200">
+                            <div class="px-4 py-5 sm:p-6">
+                                <h3 class="text-lg font-medium leading-6 text-gray-900">Ingredients</h3>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="mt-6">
-                    <h3 class="text-lg font-medium leading-6 text-gray-900">Instructions</h3>
-                    <div class="prose" v-html="recipe.instructions" />
+                    <div class="mt-6 md:mt-0">
+                        <h3 class="text-lg font-medium leading-6 text-gray-900">Instructions</h3>
+                        <div class="prose" v-html="recipe.instructions" />
+                    </div>
                 </div>
             </div>
         </div>
