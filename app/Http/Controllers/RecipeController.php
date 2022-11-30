@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateRecipeRequest;
 use App\Models\Recipe;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,7 @@ class RecipeController extends Controller
      */
     public function create()
     {
-        //
+        return inertia('Recipes/Create');
     }
 
     /**
@@ -33,9 +34,11 @@ class RecipeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateRecipeRequest $request)
     {
-        //
+        $recipe = Recipe::create($request->validated());
+
+        return redirect()->route('recipes.index');
     }
 
     /**
