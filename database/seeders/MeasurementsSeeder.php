@@ -58,7 +58,7 @@ class MeasurementsSeeder extends Seeder
             ],
             [
                 'name' => '1/2 Cup',
-                'base_units_tablespoon' => 6
+                'base_units_tablespoon' => 8
             ],
             [
                 'name' => '2/3 Cup',
