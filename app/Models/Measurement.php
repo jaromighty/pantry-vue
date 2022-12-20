@@ -10,4 +10,9 @@ class Measurement extends Model
     use HasFactory;
 
     public $timestamps = false;
+
+    protected $fillable = [
+        'name',
+        'base_units_tablespoon'
+    ];
 }
