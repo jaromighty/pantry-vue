@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('measurements', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->double('base_units_tablespoon', 10, 5);
+            $table->string('type');
+            $table->double('base_units', 8, 4);
         });
     }
 
