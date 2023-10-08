@@ -12,7 +12,6 @@ class Measurement extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'name',
-        'base_units_tablespoon'
+        'value'
     ];
 }
